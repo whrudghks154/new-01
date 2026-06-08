@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>결제 확인 중 | 레드빈디자인</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .result-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 40px 18px;
+      background: #050505;
+    }
+
+    .result-box {
+      width: min(100%, 560px);
+      padding: 34px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .result-box h1 {
+      margin-bottom: 18px;
+      font-size: clamp(34px, 7vw, 58px);
+      line-height: 1.06;
+    }
+
+    .result-box p {
+      color: var(--silver);
+      line-height: 1.7;
+    }
+
+    .result-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+  </style>
+</head>
+<body>
+  <main class="result-page">
+    <section class="result-box">
+      <p class="eyebrow">PAYMENT REVIEW</p>
+      <h1>결제 처리 결과를 확인하고 있습니다.</h1>
+      <p>결제 처리 결과 확인이 필요합니다. 추가 결제를 진행하지 마시고 레드빈디자인으로 문의해 주세요.</p>
+      <div class="result-actions">
+        <a class="btn primary" href="/#contact">문의하기</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

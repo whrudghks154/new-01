@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>결제 요청 관리 | 레드빈디자인</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style.css">
+  <script src="admin-payments.js" defer></script>
+  <style>
+    .admin-shell {
+      min-height: 100vh;
+      padding: 34px 18px 60px;
+      background: #050505;
+    }
+
+    .admin-inner {
+      width: min(100%, 1120px);
+      margin: 0 auto;
+    }
+
+    .admin-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .admin-top h1 {
+      margin: 0;
+      font-size: 34px;
+    }
+
+    .manager-grid {
+      display: grid;
+      grid-template-columns: minmax(300px, 380px) 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .manager-panel {
+      padding: 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .payment-form,
+    .field {
+      display: grid;
+      gap: 10px;
+    }
+
+    .payment-form {
+      gap: 16px;
+    }
+
+    .field span {
+      color: var(--silver);
+      font-weight: 800;
+    }
+
+    .field input,
+    .field textarea {
+      min-height: 46px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      background: #0b0b0d;
+      color: var(--text);
+      font: inherit;
+    }
+
+    .field textarea {
+      min-height: 90px;
+      padding-top: 12px;
+      resize: vertical;
+    }
+
+    .check-field {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--silver);
+      font-weight: 800;
+    }
+
+    .admin-message {
+      min-height: 22px;
+      color: var(--silver);
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .admin-message.error {
+      color: #ff7b86;
+    }
+
+    .created-link {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .created-link input {
+      min-height: 42px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      background: #0b0b0d;
+      color: var(--silver);
+    }
+
+    .requests-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .requests-table th,
+    .requests-table td {
+      padding: 13px 10px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .requests-table th {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .requests-table button {
+      min-height: 34px;
+      padding: 0 12px;
+    }
+
+    @media (max-width: 880px) {
+      .manager-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .requests-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="admin-shell">
+    <div class="admin-inner">
+      <header class="admin-top">
+        <div>
+          <p class="eyebrow">PAYMENT MANAGER</p>
+          <h1>결제 요청 관리</h1>
+        </div>
+        <button class="btn secondary" id="logout-button" type="button">로그아웃</button>
+      </header>
+
+      <div class="manager-grid">
+        <section class="manager-panel">
+          <h2>새 결제 요청</h2>
+          <form class="payment-form" id="payment-form">
+            <label class="field">
+              <span>고객사명</span>
+              <input name="companyName" required>
+            </label>
+            <label class="field">
+              <span>결제 항목명</span>
+              <input name="itemName" required>
+            </label>
+            <label class="field">
+              <span>금액</span>
+              <input name="amount" type="number" min="1" step="1" required>
+            </label>
+            <label class="check-field">
+              <input name="vatIncluded" type="checkbox" checked>
+              부가세 포함
+            </label>
+            <label class="field">
+              <span>메모</span>
+              <textarea name="memo"></textarea>
+            </label>
+            <label class="field">
+              <span>링크 유효기간</span>
+              <input name="expiresAt" type="datetime-local">
+            </label>
+            <button class="btn primary" type="submit">결제 링크 생성</button>
+            <p class="admin-message" id="form-message"></p>
+          </form>
+          <div class="created-link" id="created-link" hidden>
+            <input id="created-url" readonly>
+            <button class="btn secondary" id="copy-created-url" type="button">링크 복사</button>
+          </div>
+        </section>
+
+        <section class="manager-panel">
+          <h2>요청 목록</h2>
+          <p class="admin-message" id="list-message"></p>
+          <table class="requests-table">
+            <thead>
+              <tr>
+                <th>고객사</th>
+                <th>항목</th>
+                <th>금액</th>
+                <th>상태</th>
+                <th>생성일</th>
+                <th>만료일</th>
+                <th>링크</th>
+              </tr>
+            </thead>
+            <tbody id="requests-body"></tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

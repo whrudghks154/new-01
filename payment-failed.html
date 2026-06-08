@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>결제 실패 | 레드빈디자인</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .result-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 40px 18px;
+      background: #050505;
+    }
+
+    .result-box {
+      width: min(100%, 560px);
+      padding: 34px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .result-box h1 {
+      margin-bottom: 18px;
+      font-size: clamp(34px, 7vw, 58px);
+      line-height: 1.06;
+    }
+
+    .result-box p {
+      color: var(--silver);
+      line-height: 1.7;
+    }
+
+    .result-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+  </style>
+</head>
+<body>
+  <main class="result-page">
+    <section class="result-box">
+      <p class="eyebrow">PAYMENT FAILED</p>
+      <h1>결제가 완료되지 않았습니다.</h1>
+      <p>결제가 완료되지 않았습니다. 다시 시도하시거나 레드빈디자인으로 문의해 주세요.</p>
+      <div class="result-actions">
+        <a class="btn primary" href="/">홈으로 이동</a>
+        <a class="btn secondary" href="/#contact">문의하기</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

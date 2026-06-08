@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>결제하기 | 레드빈디자인</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://pay.nicepay.co.kr/v1/js/" defer></script>
+  <script src="payment.js" defer></script>
+  <style>
+    .payment-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 40px 18px;
+      background:
+        linear-gradient(135deg, rgba(224, 22, 43, 0.16), transparent 34%),
+        #050505;
+    }
+
+    .payment-box {
+      width: min(100%, 520px);
+      padding: 34px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .payment-box h1 {
+      margin-bottom: 16px;
+      font-size: clamp(30px, 6vw, 48px);
+      line-height: 1.08;
+    }
+
+    .payment-desc {
+      margin-bottom: 28px;
+      color: var(--silver);
+      line-height: 1.7;
+    }
+
+    .payment-note {
+      margin: 0 0 24px;
+      padding: 16px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--silver);
+      font-weight: 800;
+      line-height: 1.6;
+    }
+
+    .payment-closed-notice {
+      margin: 0 0 24px;
+      padding: 16px 18px;
+      border: 1px solid rgba(224, 22, 43, 0.38);
+      background: rgba(224, 22, 43, 0.12);
+      color: #ffd7dc;
+      font-weight: 900;
+      line-height: 1.6;
+    }
+
+    .payment-summary {
+      display: grid;
+      gap: 0;
+      margin: 0 0 28px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .payment-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 17px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .payment-row:last-child {
+      border-bottom: 0;
+    }
+
+    .payment-row dt {
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .payment-row dd {
+      margin: 0;
+      text-align: right;
+      font-weight: 900;
+    }
+
+    .payment-amount {
+      color: var(--red);
+      font-size: 28px;
+    }
+
+    .payment-message {
+      min-height: 24px;
+      margin: 16px 0 0;
+      color: var(--silver);
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .payment-message.error {
+      color: #ff7b86;
+    }
+
+    .payment-box .btn {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .payment-box .btn:disabled {
+      cursor: not-allowed;
+      opacity: 0.65;
+      transform: none;
+    }
+
+    @media (max-width: 640px) {
+      .payment-box {
+        padding: 26px 20px;
+      }
+
+      .payment-row {
+        display: grid;
+        gap: 8px;
+      }
+
+      .payment-row dd {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="payment-page">
+    <section class="payment-box" aria-labelledby="payment-title">
+      <p class="eyebrow">REDBEAN DESIGN PAYMENT</p>
+      <h1 id="payment-title">결제하기</h1>
+      <p class="payment-desc">레드빈디자인에서 제공하는 정식 카드 결제 페이지입니다.</p>
+      <p class="payment-note" id="payment-note">결제 정보를 불러오고 있습니다.</p>
+      <p class="payment-closed-notice" id="payment-closed-notice" hidden></p>
+
+      <dl class="payment-summary">
+        <div class="payment-row">
+          <dt>업체명</dt>
+          <dd id="company-name">-</dd>
+        </div>
+        <div class="payment-row">
+          <dt>결제 항목</dt>
+          <dd id="goods-name">-</dd>
+        </div>
+        <div class="payment-row">
+          <dt>결제수단</dt>
+          <dd>카드</dd>
+        </div>
+        <div class="payment-row">
+          <dt>결제금액</dt>
+          <dd class="payment-amount" id="amount">-</dd>
+        </div>
+        <div class="payment-row">
+          <dt>부가세</dt>
+          <dd id="vat-included">-</dd>
+        </div>
+      </dl>
+
+      <button class="btn primary" id="pay-button" type="button">카드로 결제하기</button>
+      <p class="payment-message" id="payment-message" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+</body>
+</html>
