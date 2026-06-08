@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보처리방침 | 레드빈디자인</title>
+  <meta name="description" content="레드빈디자인 개인정보처리방침">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .policy-wrap {
+      padding: clamp(60px, 10vw, 120px) 0 clamp(80px, 12vw, 160px);
+    }
+    .policy-hero {
+      padding: clamp(80px, 12vw, 140px) 0 clamp(48px, 7vw, 80px);
+      border-bottom: 1px solid var(--line);
+    }
+    .policy-hero .sec-tag {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+    }
+    .policy-hero h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      margin-bottom: 16px;
+    }
+    .policy-hero p {
+      font-size: 0.88rem;
+      color: var(--gray);
+    }
+    .policy-body {
+      padding-top: clamp(52px, 8vw, 96px);
+    }
+    .policy-article {
+      margin-bottom: 56px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--line);
+    }
+    .policy-article:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    .policy-article h2 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .policy-article h2 .art-no {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--red);
+      letter-spacing: 0.04em;
+    }
+    .policy-article p,
+    .policy-article li {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.85;
+    }
+    .policy-article ul,
+    .policy-article ol {
+      padding-left: 1.2em;
+      margin-top: 12px;
+    }
+    .policy-article li {
+      margin-bottom: 8px;
+    }
+    .policy-article p + p {
+      margin-top: 12px;
+    }
+    .policy-info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 0.84rem;
+    }
+    .policy-info-table th,
+    .policy-info-table td {
+      padding: 12px 16px;
+      border: 1px solid var(--line);
+      color: rgba(255,255,255,0.55);
+      text-align: left;
+      line-height: 1.6;
+      vertical-align: top;
+    }
+    .policy-info-table th {
+      background: var(--bg3);
+      color: rgba(255,255,255,0.75);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .policy-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--gray2);
+      text-decoration: none;
+      margin-bottom: 40px;
+      transition: color 0.2s;
+    }
+    .policy-back:hover { color: #fff; }
+  </style>
+</head>
+<body>
+
+  <!-- ══ HEADER ══ -->
+  <header class="header" data-header>
+    <div class="header-inner">
+      <a class="logo" href="/" aria-label="레드빈디자인 홈">
+        <span class="logo-mark">RB</span>
+        <span class="logo-text">레드빈디자인</span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="/#about">소개</a>
+        <a href="/#services">서비스</a>
+        <a href="/#projects">포트폴리오</a>
+        <a href="/#process">프로세스</a>
+        <a href="/#contact">문의</a>
+      </nav>
+      <a class="header-cta" href="/#contact">프로젝트 문의</a>
+      <button class="menu-btn" type="button" aria-label="메뉴" data-menu-toggle>
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══ MOBILE NAV ══ -->
+  <nav class="mobile-nav" data-mobile-nav aria-label="모바일 메뉴">
+    <a href="/#about">소개</a>
+    <a href="/#services">서비스</a>
+    <a href="/#projects">포트폴리오</a>
+    <a href="/#process">프로세스</a>
+    <a href="/#contact">문의</a>
+  </nav>
+
+  <main>
+    <div class="policy-hero">
+      <div class="container">
+        <a class="policy-back" href="/">← 홈으로 돌아가기</a>
+        <span class="sec-tag">Privacy Policy</span>
+        <h1>개인정보처리방침</h1>
+        <p>시행일: 2026년 6월 8일</p>
+      </div>
+    </div>
+
+    <div class="policy-wrap">
+      <div class="container">
+        <div class="policy-body">
+
+          <div class="policy-article">
+            <h2><span class="art-no">제 1 조</span>개인정보 수집 항목</h2>
+            <p>레드빈디자인(이하 "회사")은 아래의 목적으로 개인정보를 수집합니다.</p>
+            <table class="policy-info-table">
+              <thead>
+                <tr>
+                  <th>수집 경로</th>
+                  <th>수집 항목</th>
+                  <th>필수 여부</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>홈페이지 문의 폼</td>
+                  <td>이름(또는 회사명), 연락처, 이메일 주소, 필요한 서비스 종류, 문의 내용</td>
+                  <td>필수</td>
+                </tr>
+                <tr>
+                  <td>결제 진행 과정</td>
+                  <td>이름(또는 회사명), 이메일 주소, 결제 수단 정보(카드사에서 직접 처리, 회사는 저장하지 않음)</td>
+                  <td>필수</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="margin-top:16px;">회사는 민감정보(사상·신념, 건강, 성생활 등)는 수집하지 않습니다.</p>
+          </div>
+
+          <div class="policy-article">
+            <h2><span class="art-no">제 2 조</span>개인정보 수집 및 이용 목적</h2>
+            <ul>
+              <li>프로젝트 상담 접수 및 견적 안내</li>
+              <li>서비스 계약 체결 및 진행 관련 연락</li>
+              <li>결제 확인 및 결제 관련 안내</li>
+              <li>납품 파일 전달 및 AS 대응</li>
+              <li>법령에 따른 의무 이행</li>
+            </ul>
+            <p>수집한 개인정보는 위 목적 이외의 용도로 사용하지 않으며, 목적이 변경될 경우 사전에 동의를 구합니다.</p>
+          </div>
+
+          <div class="policy-article">
+            <h2><span class="art-no">제 3 조</span>개인정보 보유 및 이용기간</h2>
+            <p>회사는 개인정보 수집·이용 목적이 달성된 후 해당 정보를 지체 없이 파기합니다. 단, 관계 법령에 따라 일정 기간 보존이 필요한 경우 해당 기간 동안 보관합니다.</p>
+            <table class="policy-info-table">
+              <thead>
+                <tr><th>보존 근거</th><th>보존 기간</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>전자상거래 등에서의 소비자 보호에 관한 법률 — 계약·청약철회 기록</td><td>5년</td></tr>
+                <tr><td>전자상거래 등에서의 소비자 보호에 관한 법률 — 대금결제·공급기록</td><td>5년</td></tr>
+                <tr><td>전자상거래 등에서의 소비자 보호에 관한 법률 — 소비자 불만·분쟁처리 기록</td><td>3년</td></tr>
+                <tr><td>통신비밀보호법 — 서비스 이용 접속 로그</td><td>3개월</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="policy-article">
+            <h2><span class="art-no">제 4 조</span>개인정보 제3자 제공 여부</h2>
+            <p>회사는 원칙적으로 정보주체의 개인정보를 제3자에게 제공하지 않습니다. 다만, 아래의 경우에는 예외로 합니다.</p>
+            <ul>
+              <li>정보주체가 사전에 동의한 경우</li>
+              <li>법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우</li>
+            </ul>
+          </div>
+
+          <div class="policy-article">
+            <h2><span class="art-no">제 5 조</span>개인정보 처리 위탁 여부</h2>
+            <p>회사는 서비스 제공을 위해 아래와 같이 개인정보 처리 업무를 위탁합니다.</p>
+            <table class="policy-info-table">
+              <thead>
+                <tr><th>수탁 업체</th><th>위탁 업무 내용</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>NICEPAY(나이스페이먼츠)</td><td>결제 처리 및 결제 정보 관리</td></tr>
+                <tr><td>Vercel Inc.</td><td>웹 서비스 호스팅 및 서버리스 함수 운영</td></tr>
+                <tr><td>Neon (데이터베이스)</td><td>결제 요청 데이터 저장 및 관리</td></tr>
+              </tbody>
+            </table>
+            <p style="margin-top:16px;">위탁 계약 시 관계 법령에 따라 개인정보가 안전하게 관리되도록 필요한 사항을 규정합니다.</p>
+          </div>
+
+          <div class="policy-article">
+            <h2><span class="art-no">제 6 조</span>정보주체의 권리와 행사 방법</h2>
+            <p>정보주체는 회사에 대해 언제든지 다음 각 호의 권리를 행사할 수 있습니다.</p>
+            <ul>
+              <li>개인정보 열람 요구</li>
+              <li>오류 등이 있을 경우 정정 요구</li>
+              <li>삭제 요구</li>
+              <li>처리 정지 요구</li>
+            </ul>
+            <p>권리 행사는 이메일(whrudghks154@naver.com) 또는 전화(010-8945-7660)를 통해 요청하실 수 있으며, 회사는 지체 없이 조치합니다.</p>
+          </div>
+
+          <div class="policy-article">
+            <h2><span class="art-no">제 7 조</span>개인정보 보호책임자</h2>
+            <table class="policy-info-table">
+              <tbody>
+                <tr><th>성명</th><td>조경환</td></tr>
+                <tr><th>직책</th><td>대표</td></tr>
+                <tr><th>이메일</th><td>whrudghks154@naver.com</td></tr>
+                <tr><th>전화</th><td>010-8945-7660</td></tr>
+              </tbody>
+            </table>
+            <p style="margin-top:16px;">개인정보 보호와 관련한 불만 처리 및 피해 구제를 위해 아래 기관에 도움을 요청하실 수 있습니다.</p>
+            <ul>
+              <li>개인정보 침해신고센터: privacy.kisa.or.kr / 국번없이 118</li>
+              <li>개인정보 분쟁조정위원회: www.kopico.go.kr / 1833-6972</li>
+            </ul>
+          </div>
+
+          <div class="policy-article">
+            <h2><span class="art-no">제 8 조</span>개인정보 자동수집 장치 사용 여부</h2>
+            <p>회사 홈페이지는 별도의 쿠키(Cookie) 또는 자동화된 개인정보 수집 장치를 사용하지 않습니다.</p>
+            <p>다만, 호스팅 서비스(Vercel)의 기술적 운영 과정에서 접속 로그(IP 주소, 접속 시각 등)가 자동으로 기록될 수 있으며, 이는 서비스 운영·보안 목적으로만 활용되고 통신비밀보호법에 따라 3개월간 보관됩니다.</p>
+          </div>
+
+          <div class="policy-article">
+            <h2><span class="art-no">제 9 조</span>개인정보처리방침 시행일 및 변경</h2>
+            <ul>
+              <li>이 개인정보처리방침은 <strong>2026년 6월 8일</strong>부터 시행됩니다.</li>
+              <li>법령·정책 또는 서비스 변경에 따라 방침이 변경될 경우, 변경 사항을 홈페이지에 7일 이상 공지합니다.</li>
+              <li>중요한 변경 사항이 있을 경우 이메일 등 개별 통지할 수 있습니다.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">RB</span>
+        <div>
+          <p>레드빈디자인</p>
+          <span>Branding · Web · Commerce · Marketing Design</span>
+        </div>
+      </div>
+      <nav class="footer-links">
+        <a href="terms.html">이용약관</a>
+        <a href="privacy.html">개인정보처리방침</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <address>
+        상호명 레드빈디자인(REDBEAN Design) · 대표 조경환 · 사업자등록번호 841-30-01557<br>
+        주소 경기도 수원시 장안구 정조로1102번길 16-6, 402호(송죽동) · 이메일 whrudghks154@naver.com · 전화 010-8945-7660<br>
+        통신판매업 신고번호 : 제2026-수원장안-0431호
+      </address>
+      <p>© 2025 REDBEAN Design. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector('[data-header]');
+    window.addEventListener('scroll', () => {
+      header?.classList.toggle('scrolled', window.scrollY > 30);
+    }, { passive: true });
+    const menuBtn = document.querySelector('[data-menu-toggle]');
+    const mobileNav = document.querySelector('[data-mobile-nav]');
+    menuBtn?.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open);
+    });
+    mobileNav?.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => mobileNav.classList.remove('open'))
+    );
+  </script>
+</body>
+</html>
