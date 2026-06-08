@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>판매 서비스 안내 | 레드빈디자인</title>
+  <meta name="description" content="레드빈디자인의 판매 서비스 목록과 제공기간을 확인하세요. 홈페이지 제작, 상세페이지 디자인, 브랜드 디자인 등 모든 서비스는 최대 3개월 이내 제공됩니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .products-page {
+      min-height: 100vh;
+      padding: 100px 0 80px;
+      background:
+        linear-gradient(135deg, rgba(196, 18, 48, 0.12), transparent 40%),
+        #080808;
+    }
+
+    .products-header {
+      margin-bottom: 60px;
+    }
+
+    .products-header .eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .products-header h1 {
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 900;
+      line-height: 1.12;
+      margin-bottom: 20px;
+    }
+
+    .products-header h1 em {
+      font-style: normal;
+      color: var(--red);
+    }
+
+    .products-header p {
+      color: rgba(255,255,255,0.55);
+      max-width: 520px;
+      line-height: 1.75;
+    }
+
+    .duration-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border: 1px solid rgba(196, 18, 48, 0.4);
+      background: rgba(196, 18, 48, 0.1);
+      color: #ffd7dc;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 48px;
+    }
+
+    .duration-badge span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--red);
+      flex-shrink: 0;
+    }
+
+    .products-grid {
+      display: grid;
+      gap: 2px;
+    }
+
+    .product-item {
+      display: grid;
+      grid-template-columns: 60px 1fr auto;
+      align-items: start;
+      gap: 28px;
+      padding: 32px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .product-item:last-child {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .product-no {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--red);
+      padding-top: 4px;
+    }
+
+    .product-info h2 {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .product-info p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    .product-duration {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .product-duration .period {
+      display: block;
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 6px;
+    }
+
+    .product-duration .max {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: #ffd7dc;
+      background: rgba(196, 18, 48, 0.18);
+      border: 1px solid rgba(196, 18, 48, 0.35);
+      padding: 5px 12px;
+    }
+
+    .products-notice {
+      margin-top: 56px;
+      padding: 28px 32px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .products-notice h3 {
+      font-size: 14px;
+      font-weight: 800;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .products-notice ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .products-notice ul li {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .products-notice ul li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--red);
+    }
+
+    .products-cta {
+      margin-top: 48px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border: 1px solid rgba(255,255,255,0.18);
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+      font-weight: 700;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-back:hover {
+      border-color: rgba(255,255,255,0.4);
+      color: #fff;
+    }
+
+    .btn-contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--red);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+
+    .btn-contact:hover {
+      background: #a50f27;
+    }
+
+    @media (max-width: 640px) {
+      .product-item {
+        grid-template-columns: 40px 1fr;
+        grid-template-rows: auto auto;
+        gap: 16px;
+      }
+
+      .product-duration {
+        grid-column: 2;
+        text-align: left;
+      }
+
+      .products-notice {
+        padding: 22px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ HEADER ══ -->
+  <header class="header scrolled" data-header>
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="레드빈디자인 홈">
+        <span class="logo-mark">RB</span>
+        <span class="logo-text">레드빈디자인</span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="index.html#about">소개</a>
+        <a href="index.html#services">서비스</a>
+        <a href="index.html#projects">포트폴리오</a>
+        <a href="index.html#process">프로세스</a>
+        <a href="index.html#contact">문의</a>
+      </nav>
+      <a class="header-cta" href="index.html#contact">프로젝트 문의</a>
+      <button class="menu-btn" type="button" aria-label="메뉴" data-menu-toggle>
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="products-page">
+    <div class="container">
+
+      <div class="products-header">
+        <span class="eyebrow">PRODUCTS &amp; SERVICES</span>
+        <h1>판매 서비스<br><em>안내</em></h1>
+        <p>레드빈디자인이 제공하는 디자인 용역 서비스 목록과 제공기간을 확인하세요.<br>모든 서비스는 최대 3개월 이내에 제공됩니다.</p>
+      </div>
+
+      <div class="duration-badge">
+        <span></span>
+        모든 서비스 제공기간은 최대 3개월(90일) 이내입니다
+      </div>
+
+      <div class="products-grid">
+
+        <article class="product-item">
+          <span class="product-no">01</span>
+          <div class="product-info">
+            <h2>홈페이지 제작</h2>
+            <p>첫 화면부터 문의까지 이어지는 정보 구조와 반응형 화면을 설계합니다. 기본 단가 800,000원부터, 상세페이지 추가 시 페이지당 200,000원.</p>
+          </div>
+          <div class="product-duration">
+            <span class="period">약 2주 ~ 8주</span>
+            <span class="max">최대 3개월 이내</span>
+          </div>
+        </article>
+
+        <article class="product-item">
+          <span class="product-no">02</span>
+          <div class="product-info">
+            <h2>상세페이지 디자인</h2>
+            <p>제품의 강점과 구매 이유가 빠르게 읽히는 판매 페이지를 제작합니다. 쇼핑몰, 스마트스토어, 브랜드몰 등 플랫폼에 맞게 구성합니다.</p>
+          </div>
+          <div class="product-duration">
+            <span class="period">약 1주 ~ 4주</span>
+            <span class="max">최대 3개월 이내</span>
+          </div>
+        </article>
+
+        <article class="product-item">
+          <span class="product-no">03</span>
+          <div class="product-info">
+            <h2>카탈로그 · 브로슈어 디자인</h2>
+            <p>브로슈어, 제안서, 카탈로그를 읽기 좋은 흐름으로 완성합니다. 기본 작업비 44,000원 + 페이지당 44,000원.</p>
+          </div>
+          <div class="product-duration">
+            <span class="period">약 1주 ~ 8주</span>
+            <span class="max">최대 3개월 이내</span>
+          </div>
+        </article>
+
+        <article class="product-item">
+          <span class="product-no">04</span>
+          <div class="product-info">
+            <h2>브랜드 · 홍보물 디자인</h2>
+            <p>로고, 컬러, 그래픽 룰을 정리해 브랜드의 기준을 만듭니다. 인쇄물(리플렛, 포스터, 현수막, 명함 등) 및 온라인 홍보 소재를 포함합니다.</p>
+          </div>
+          <div class="product-duration">
+            <span class="period">약 1주 ~ 6주</span>
+            <span class="max">최대 3개월 이내</span>
+          </div>
+        </article>
+
+        <article class="product-item">
+          <span class="product-no">05</span>
+          <div class="product-info">
+            <h2>유지보수 및 부분 수정</h2>
+            <p>운영 중 필요한 이미지, 배너, 페이지 개선을 빠르게 지원합니다. 긴급 작업 및 단기 수정 의뢰도 가능합니다.</p>
+          </div>
+          <div class="product-duration">
+            <span class="period">약 1일 ~ 4주</span>
+            <span class="max">최대 3개월 이내</span>
+          </div>
+        </article>
+
+        <article class="product-item">
+          <span class="product-no">06</span>
+          <div class="product-info">
+            <h2>광고 · 마케팅 디자인</h2>
+            <p>SNS, 배너, 캠페인 소재를 브랜드 톤에 맞춰 전개합니다. 온라인 광고 소재, 썸네일, 카드뉴스 등을 제작합니다.</p>
+          </div>
+          <div class="product-duration">
+            <span class="period">약 1일 ~ 4주</span>
+            <span class="max">최대 3개월 이내</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="products-notice">
+        <h3>서비스 안내 사항</h3>
+        <ul>
+          <li>모든 서비스의 제공기간은 계약일(결제일) 기준 최대 3개월(90일) 이내입니다.</li>
+          <li>제공기간은 작업 범위, 자료 제출 속도, 수정 횟수에 따라 달라질 수 있으며, 최대 3개월을 초과하지 않습니다.</li>
+          <li>결제는 상담 및 견적 확정 후 관리자가 발급하는 개별 결제 링크를 통해 진행됩니다.</li>
+          <li>표시된 금액은 기본 기준가이며, 작업 범위에 따라 최종 견적이 달라질 수 있습니다.</li>
+          <li>결제 및 서비스 이용 전 <a href="terms.html" style="color:var(--red);text-decoration:underline;">이용약관</a>을 반드시 확인해주세요.</li>
+        </ul>
+      </div>
+
+      <div class="products-cta">
+        <a class="btn-back" href="index.html">← 홈으로 돌아가기</a>
+        <a class="btn-contact" href="index.html#contact">서비스 문의하기 →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">RB</span>
+        <div>
+          <p>레드빈디자인</p>
+          <span>Branding · Web · Commerce · Marketing Design</span>
+        </div>
+      </div>
+      <nav class="footer-links">
+        <a href="terms.html">이용약관</a>
+        <a href="privacy.html">개인정보처리방침</a>
+        <a href="products.html">판매서비스안내</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <address>
+        상호명 레드빈디자인(REDBEAN Design) · 대표 조경환 · 사업자등록번호 841-30-01557<br>
+        주소 경기도 수원시 장안구 정조로1102번길 16-6, 402호(송죽동) · 이메일 whrudghks154@naver.com · 전화 010-8945-7660<br>
+        통신판매업 신고번호 : 제2026-수원장안-0431호
+      </address>
+      <p>© 2025 REDBEAN Design. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
