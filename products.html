@@ -487,8 +487,7 @@
               <dd>NICEPAY 카드결제</dd>
             </div>
           </dl>
-          <button class="btn-review-pay" id="review-pay-btn" type="button">상품 결제하기</button>
-          <p id="review-pay-msg" style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.5);min-height:20px;"></p>
+          <a class="btn-review-pay" href="https://redbean-payment-manager-dev.vercel.app/payment.html?token=eqbW-XmUvNI8OJ1YgcZDXe5nFsy5OTmYMLZGZxfa2wU">상품 결제하기</a>
         </div>
       </div>
 
@@ -537,33 +536,5 @@
     </div>
   </footer>
 
-  <script>
-    (function () {
-      const btn = document.getElementById("review-pay-btn");
-      const msg = document.getElementById("review-pay-msg");
-
-      btn.addEventListener("click", async function () {
-        btn.disabled = true;
-        msg.textContent = "결제 링크를 생성하고 있습니다...";
-
-        try {
-          const res = await fetch("/api/review-payment", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" }
-          });
-          const data = await res.json().catch(() => ({}));
-
-          if (!res.ok || !data.ok) {
-            throw new Error(data.message || "결제 링크 생성에 실패했습니다.");
-          }
-
-          window.location.href = data.paymentUrl;
-        } catch (err) {
-          msg.textContent = err.message || "오류가 발생했습니다. 잠시 후 다시 시도해주세요.";
-          btn.disabled = false;
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
