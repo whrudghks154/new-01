@@ -58,7 +58,7 @@
 
   const loadRequest = async () => {
     if (!token) {
-      stopPaymentRequest("결제 링크 토큰이 없습니다.");
+      stopPaymentRequest("유효하지 않은 결제 링크입니다.");
       return;
     }
 
