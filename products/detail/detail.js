@@ -147,7 +147,7 @@
         let options = '';
         for (let p = product.minPages; p <= product.maxPages; p += product.pageStep) {
           const price = calcPrice(p);
-          options += `<option value="${p}">${p}P — ${fmt(price)} (VAT 포함)</option>`;
+          options += `<option value="${p}">${p}P</option>`;
         }
         const initPrice = calcPrice(product.minPages);
 

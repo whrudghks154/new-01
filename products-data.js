@@ -1,6 +1,7 @@
 /* ═══════════════════════════════════════════
    REDBEAN DESIGN — 상품 데이터
    이 파일 하나만 수정하면 모든 가격/상품 정보가 반영됩니다.
+   모든 가격은 VAT(부가세 10%) 포함 금액입니다.
 
    [이미지 교체 방법]
    각 상품의 image 필드 경로에 맞게 파일을 저장하면 자동 적용됩니다.
@@ -35,9 +36,10 @@ const RB_PRODUCTS = {
       name: '상세페이지',
       shortDesc: '쇼핑몰·스마트스토어용 판매 상세페이지 제작',
       optionType: 'fixed',
+      // 공급가 300,000원 × 1.1 = 330,000원 / 공급가 600,000원 × 1.1 = 660,000원
       tiers: [
-        { label: '기본형', price: 300000 },
-        { label: '고급형', price: 600000 },
+        { label: '기본형', price: 330000 },
+        { label: '고급형', price: 660000 },
       ],
     },
     {
@@ -47,9 +49,10 @@ const RB_PRODUCTS = {
       name: '홈페이지',
       shortDesc: '기업·브랜드 홈페이지 제작',
       optionType: 'fixed',
+      // 공급가 800,000원 × 1.1 = 880,000원 / 공급가 1,500,000원 × 1.1 = 1,650,000원
       tiers: [
-        { label: '기본형', price: 800000 },
-        { label: '고급형', price: 1500000 },
+        { label: '기본형', price: 880000 },
+        { label: '고급형', price: 1650000 },
       ],
     },
 
@@ -61,9 +64,10 @@ const RB_PRODUCTS = {
       name: '웹 배너',
       shortDesc: '온라인 광고·이벤트용 웹 배너 제작',
       optionType: 'fixed',
+      // 공급가 50,000원 × 1.1 = 55,000원 / 공급가 100,000원 × 1.1 = 110,000원
       tiers: [
-        { label: '기본형', price: 50000 },
-        { label: '고급형', price: 100000 },
+        { label: '기본형', price: 55000 },
+        { label: '고급형', price: 110000 },
       ],
     },
     {
@@ -73,10 +77,10 @@ const RB_PRODUCTS = {
       name: '인스타그램 썸네일',
       shortDesc: '인스타그램 피드·릴스 썸네일 디자인',
       optionType: 'fixed',
-      // 공급가 40,000원 × 1.1 = 44,000원 VAT 포함
+      // 공급가 40,000원 × 1.1 = 44,000원 / 공급가 60,000원 × 1.1 = 66,000원
       tiers: [
         { label: '기본형', price: 44000 },
-        { label: '고급형', price: 60000 },
+        { label: '고급형', price: 66000 },
       ],
     },
     {
@@ -86,10 +90,10 @@ const RB_PRODUCTS = {
       name: '네이버 블로그 썸네일',
       shortDesc: '네이버 블로그 포스팅 썸네일 디자인',
       optionType: 'fixed',
-      // 공급가 30,000원 × 1.1 = 33,000원 VAT 포함
+      // 공급가 30,000원 × 1.1 = 33,000원 / 공급가 50,000원 × 1.1 = 55,000원
       tiers: [
         { label: '기본형', price: 33000 },
-        { label: '고급형', price: 50000 },
+        { label: '고급형', price: 55000 },
       ],
     },
     {
@@ -99,10 +103,10 @@ const RB_PRODUCTS = {
       name: '유튜브 썸네일',
       shortDesc: '클릭률 높은 유튜브 썸네일 디자인',
       optionType: 'fixed',
-      // 공급가 40,000원 × 1.1 = 44,000원 VAT 포함
+      // 공급가 40,000원 × 1.1 = 44,000원 / 공급가 50,000원 × 1.1 = 55,000원
       tiers: [
         { label: '기본형', price: 44000 },
-        { label: '고급형', price: 50000 },
+        { label: '고급형', price: 55000 },
       ],
     },
     {
@@ -112,9 +116,10 @@ const RB_PRODUCTS = {
       name: '네이버 카페 디자인',
       shortDesc: '네이버 카페 스킨·배너·메뉴 디자인',
       optionType: 'fixed',
+      // 공급가 150,000원 × 1.1 = 165,000원 / 공급가 300,000원 × 1.1 = 330,000원
       tiers: [
-        { label: '기본형', price: 150000 },
-        { label: '고급형', price: 300000 },
+        { label: '기본형', price: 165000 },
+        { label: '고급형', price: 330000 },
       ],
     },
 
@@ -164,9 +169,10 @@ const RB_PRODUCTS = {
       name: '패키지',
       shortDesc: '제품 패키지·박스 디자인',
       optionType: 'fixed',
+      // 공급가 300,000원 × 1.1 = 330,000원 / 공급가 700,000원 × 1.1 = 770,000원
       tiers: [
-        { label: '기본형', price: 300000 },
-        { label: '고급형', price: 700000 },
+        { label: '기본형', price: 330000 },
+        { label: '고급형', price: 770000 },
       ],
     },
     {
@@ -176,9 +182,10 @@ const RB_PRODUCTS = {
       name: '상품 상세페이지',
       shortDesc: '브랜딩 기반 프리미엄 상품 상세페이지',
       optionType: 'fixed',
+      // 공급가 400,000원 × 1.1 = 440,000원 / 공급가 800,000원 × 1.1 = 880,000원
       tiers: [
-        { label: '기본형', price: 400000 },
-        { label: '고급형', price: 800000 },
+        { label: '기본형', price: 440000 },
+        { label: '고급형', price: 880000 },
       ],
     },
     {
@@ -188,9 +195,10 @@ const RB_PRODUCTS = {
       name: '로고',
       shortDesc: '브랜드 아이덴티티 로고 디자인',
       optionType: 'fixed',
+      // 공급가 200,000원 × 1.1 = 220,000원 / 공급가 500,000원 × 1.1 = 550,000원
       tiers: [
-        { label: '기본형', price: 200000 },
-        { label: '고급형', price: 500000 },
+        { label: '기본형', price: 220000 },
+        { label: '고급형', price: 550000 },
       ],
     },
 
@@ -328,7 +336,7 @@ const RB_PRODUCTS = {
       name: '3단 리플렛',
       shortDesc: '3단 접지형 홍보 리플렛 디자인',
       optionType: 'sides',
-      // 단면 공급가 100,000원 × 1.1 = 110,000원 / 양면 공급가 200,000원 × 1.1 = 220,000원
+      // 공급가 100,000원 × 1.1 = 110,000원 / 공급가 200,000원 × 1.1 = 220,000원
       singlePrice: 110000,
       doublePrice: 220000,
     },
@@ -339,10 +347,10 @@ const RB_PRODUCTS = {
       name: '현수막',
       shortDesc: '행사·홍보용 현수막 디자인',
       optionType: 'fixed',
-      // 공급가 60,000원 × 1.1 = 66,000원 VAT 포함
+      // 공급가 60,000원 × 1.1 = 66,000원 / 공급가 100,000원 × 1.1 = 110,000원
       tiers: [
         { label: '기본형', price: 66000 },
-        { label: '고급형', price: 100000 },
+        { label: '고급형', price: 110000 },
       ],
     },
     {
@@ -352,10 +360,10 @@ const RB_PRODUCTS = {
       name: '포스터',
       shortDesc: '행사·상품 홍보 포스터 디자인',
       optionType: 'fixed',
-      // 공급가 100,000원 × 1.1 = 110,000원 VAT 포함
+      // 공급가 100,000원 × 1.1 = 110,000원 / 공급가 120,000원 × 1.1 = 132,000원
       tiers: [
         { label: '기본형', price: 110000 },
-        { label: '고급형', price: 120000 },
+        { label: '고급형', price: 132000 },
       ],
     },
     {
@@ -365,10 +373,10 @@ const RB_PRODUCTS = {
       name: '간판',
       shortDesc: '매장·업체 간판 디자인',
       optionType: 'fixed',
-      // 공급가 150,000원 × 1.1 = 165,000원 VAT 포함
+      // 공급가 150,000원 × 1.1 = 165,000원 / 공급가 350,000원 × 1.1 = 385,000원
       tiers: [
         { label: '기본형', price: 165000 },
-        { label: '고급형', price: 350000 },
+        { label: '고급형', price: 385000 },
       ],
     },
     {
@@ -378,7 +386,7 @@ const RB_PRODUCTS = {
       name: '전단지',
       shortDesc: '행사·이벤트 전단지 디자인',
       optionType: 'sides',
-      // 단면 공급가 50,000원 × 1.1 = 55,000원 / 양면 공급가 100,000원 × 1.1 = 110,000원
+      // 공급가 50,000원 × 1.1 = 55,000원 / 공급가 100,000원 × 1.1 = 110,000원
       singlePrice: 55000,
       doublePrice: 110000,
     },
@@ -389,7 +397,7 @@ const RB_PRODUCTS = {
       name: 'X배너',
       shortDesc: '전시·매장용 X배너 스탠드 디자인',
       optionType: 'sides',
-      // 단면 공급가 80,000원 × 1.1 = 88,000원 / 양면 공급가 120,000원 × 1.1 = 132,000원
+      // 공급가 80,000원 × 1.1 = 88,000원 / 공급가 120,000원 × 1.1 = 132,000원
       singlePrice: 88000,
       doublePrice: 132000,
     },
@@ -402,8 +410,9 @@ const RB_PRODUCTS = {
       name: '일반 명함',
       shortDesc: '기본 명함 디자인',
       optionType: 'sides',
-      singlePrice: 50000,
-      doublePrice: 70000,
+      // 공급가 50,000원 × 1.1 = 55,000원 / 공급가 70,000원 × 1.1 = 77,000원
+      singlePrice: 55000,
+      doublePrice: 77000,
     },
     {
       id: 'premium-card',
@@ -412,8 +421,9 @@ const RB_PRODUCTS = {
       name: '고급 명함',
       shortDesc: '고급 소재·특수인쇄 명함 디자인',
       optionType: 'sides',
-      singlePrice: 90000,
-      doublePrice: 130000,
+      // 공급가 90,000원 × 1.1 = 99,000원 / 공급가 130,000원 × 1.1 = 143,000원
+      singlePrice: 99000,
+      doublePrice: 143000,
     },
 
     /* ─── 스티커 ─── */
@@ -424,10 +434,10 @@ const RB_PRODUCTS = {
       name: '일반 스티커',
       shortDesc: '제품·판촉용 일반 스티커 디자인',
       optionType: 'fixed',
-      // 공급가 20,000원 × 1.1 = 22,000원 VAT 포함
+      // 공급가 20,000원 × 1.1 = 22,000원 / 공급가 80,000원 × 1.1 = 88,000원
       tiers: [
         { label: '기본형', price: 22000 },
-        { label: '고급형', price: 80000 },
+        { label: '고급형', price: 88000 },
       ],
     },
     {
@@ -437,10 +447,10 @@ const RB_PRODUCTS = {
       name: '고급 스티커',
       shortDesc: '특수 소재·형태 컷팅 고급 스티커 디자인',
       optionType: 'fixed',
-      // 공급가 40,000원 × 1.1 = 44,000원 VAT 포함
+      // 공급가 40,000원 × 1.1 = 44,000원 / 공급가 150,000원 × 1.1 = 165,000원
       tiers: [
         { label: '기본형', price: 44000 },
-        { label: '고급형', price: 150000 },
+        { label: '고급형', price: 165000 },
       ],
     },
 
@@ -452,8 +462,9 @@ const RB_PRODUCTS = {
       name: '상품권',
       shortDesc: '브랜드 상품권·교환권 디자인',
       optionType: 'sides',
-      singlePrice: 60000,
-      doublePrice: 90000,
+      // 공급가 60,000원 × 1.1 = 66,000원 / 공급가 90,000원 × 1.1 = 99,000원
+      singlePrice: 66000,
+      doublePrice: 99000,
     },
     {
       id: 'invitation',
@@ -462,8 +473,9 @@ const RB_PRODUCTS = {
       name: '초대장',
       shortDesc: '행사·결혼·파티 초대장 디자인',
       optionType: 'sides',
-      singlePrice: 70000,
-      doublePrice: 100000,
+      // 공급가 70,000원 × 1.1 = 77,000원 / 공급가 100,000원 × 1.1 = 110,000원
+      singlePrice: 77000,
+      doublePrice: 110000,
     },
     {
       id: 'ticket',
@@ -472,8 +484,9 @@ const RB_PRODUCTS = {
       name: '티켓',
       shortDesc: '공연·이벤트 입장권 티켓 디자인',
       optionType: 'sides',
-      singlePrice: 50000,
-      doublePrice: 80000,
+      // 공급가 50,000원 × 1.1 = 55,000원 / 공급가 80,000원 × 1.1 = 88,000원
+      singlePrice: 55000,
+      doublePrice: 88000,
     },
     {
       id: 'postcard',
@@ -482,8 +495,9 @@ const RB_PRODUCTS = {
       name: '엽서',
       shortDesc: '브랜드·기념 엽서 디자인',
       optionType: 'sides',
-      singlePrice: 40000,
-      doublePrice: 65000,
+      // 공급가 40,000원 × 1.1 = 44,000원 / 공급가 65,000원 × 1.1 = 71,500원
+      singlePrice: 44000,
+      doublePrice: 71500,
     },
     {
       id: 'coupon',
@@ -492,8 +506,9 @@ const RB_PRODUCTS = {
       name: '쿠폰',
       shortDesc: '할인·판촉 쿠폰 디자인',
       optionType: 'sides',
-      singlePrice: 40000,
-      doublePrice: 60000,
+      // 공급가 40,000원 × 1.1 = 44,000원 / 공급가 60,000원 × 1.1 = 66,000원
+      singlePrice: 44000,
+      doublePrice: 66000,
     },
 
     /* ─── 봉투 ─── */
@@ -504,9 +519,10 @@ const RB_PRODUCTS = {
       name: '대봉투',
       shortDesc: 'A4 서류용 대봉투 디자인',
       optionType: 'fixed',
+      // 공급가 60,000원 × 1.1 = 66,000원 / 공급가 100,000원 × 1.1 = 110,000원
       tiers: [
-        { label: '기본형', price: 60000 },
-        { label: '고급형', price: 100000 },
+        { label: '기본형', price: 66000 },
+        { label: '고급형', price: 110000 },
       ],
     },
     {
@@ -516,9 +532,10 @@ const RB_PRODUCTS = {
       name: '중봉투',
       shortDesc: '중형 서류봉투 디자인',
       optionType: 'fixed',
+      // 공급가 50,000원 × 1.1 = 55,000원 / 공급가 85,000원 × 1.1 = 93,500원
       tiers: [
-        { label: '기본형', price: 50000 },
-        { label: '고급형', price: 85000 },
+        { label: '기본형', price: 55000 },
+        { label: '고급형', price: 93500 },
       ],
     },
     {
@@ -528,9 +545,10 @@ const RB_PRODUCTS = {
       name: '소봉투',
       shortDesc: '소형 서류·카드봉투 디자인',
       optionType: 'fixed',
+      // 공급가 40,000원 × 1.1 = 44,000원 / 공급가 70,000원 × 1.1 = 77,000원
       tiers: [
-        { label: '기본형', price: 40000 },
-        { label: '고급형', price: 70000 },
+        { label: '기본형', price: 44000 },
+        { label: '고급형', price: 77000 },
       ],
     },
 
@@ -542,8 +560,9 @@ const RB_PRODUCTS = {
       name: '선거공보',
       shortDesc: '선거관리위원회 규격 선거공보 편집 디자인',
       optionType: 'pages',
-      basePrice: 100000,
-      pricePerPage: 30000,
+      // 공급가 기본 100,000원 × 1.1 = 110,000원 / 공급가 30,000원/P × 1.1 = 33,000원/P
+      basePrice: 110000,
+      pricePerPage: 33000,
       minPages: 4,
       maxPages: 40,
       pageStep: 4,
@@ -555,9 +574,10 @@ const RB_PRODUCTS = {
       name: '선거공보 3단접지',
       shortDesc: '3단 접지 선거공보 편집 디자인',
       optionType: 'fixed',
+      // 공급가 200,000원 × 1.1 = 220,000원 / 공급가 350,000원 × 1.1 = 385,000원
       tiers: [
-        { label: '기본형', price: 200000 },
-        { label: '고급형', price: 350000 },
+        { label: '기본형', price: 220000 },
+        { label: '고급형', price: 385000 },
       ],
     },
     {
@@ -567,9 +587,10 @@ const RB_PRODUCTS = {
       name: '선거공보 2단접지',
       shortDesc: '2단 접지 선거공보 편집 디자인',
       optionType: 'fixed',
+      // 공급가 170,000원 × 1.1 = 187,000원 / 공급가 300,000원 × 1.1 = 330,000원
       tiers: [
-        { label: '기본형', price: 170000 },
-        { label: '고급형', price: 300000 },
+        { label: '기본형', price: 187000 },
+        { label: '고급형', price: 330000 },
       ],
     },
     {
@@ -579,9 +600,10 @@ const RB_PRODUCTS = {
       name: '선거벽보 포스터',
       shortDesc: '선거관리위원회 규격 선거벽보 디자인',
       optionType: 'fixed',
+      // 공급가 150,000원 × 1.1 = 165,000원 / 공급가 280,000원 × 1.1 = 308,000원
       tiers: [
-        { label: '기본형', price: 150000 },
-        { label: '고급형', price: 280000 },
+        { label: '기본형', price: 165000 },
+        { label: '고급형', price: 308000 },
       ],
     },
     {
@@ -591,8 +613,9 @@ const RB_PRODUCTS = {
       name: '선거 명함',
       shortDesc: '후보자 선거 명함 디자인',
       optionType: 'sides',
-      singlePrice: 80000,
-      doublePrice: 120000,
+      // 공급가 80,000원 × 1.1 = 88,000원 / 공급가 120,000원 × 1.1 = 132,000원
+      singlePrice: 88000,
+      doublePrice: 132000,
     },
   ],
 
