@@ -6,6 +6,11 @@
   <title>레드빈디자인 | 수원 브랜딩·편집·웹디자인 전문 디자인기획사</title>
   <meta name="description" content="레드빈디자인은 수원을 기반으로 홈페이지 제작, 상세페이지 디자인, 브랜드 아이덴티티, 광고·마케팅 디자인을 제공하는 디자인 스튜디오입니다.">
   <meta name="author" content="레드빈디자인">
+  <meta property="og:site_name" content="레드빈디자인">
+  <meta property="og:title" content="레드빈디자인 | 수원 브랜딩·편집·웹디자인 전문 디자인기획사">
+  <meta property="og:description" content="레드빈디자인은 수원을 기반으로 홈페이지 제작, 상세페이지 디자인, 브랜드 아이덴티티, 광고·마케팅 디자인을 제공하는 디자인 스튜디오입니다.">
+  <meta property="og:url" content="https://redbeandesign.co.kr/">
+  <meta property="og:type" content="website">
   <meta name="theme-color" content="#c41230">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,13 +22,13 @@
   <!-- ══ HEADER ══ -->
   <header class="header" data-header>
     <div class="header-inner">
-      <a class="logo" href="#home" aria-label="레드빈디자인 홈">
-        <span class="logo-mark">RB</span>
-        <span class="logo-text">레드빈디자인</span>
+      <a class="logo" href="index.html" aria-label="레드빈디자인 홈으로 이동">
+        <img src="assets/logo/redbean-logo-white.png" alt="레드빈디자인 공식 로고" class="site-logo-img">
       </a>
       <nav class="nav" aria-label="주요 메뉴">
         <a href="#about">소개</a>
         <a href="#services">서비스</a>
+        <a href="#product-categories">상품</a>
         <a href="#projects">포트폴리오</a>
         <a href="#process">프로세스</a>
         <a href="#contact">문의</a>
@@ -39,6 +44,7 @@
   <nav class="mobile-nav" data-mobile-nav aria-label="모바일 메뉴">
     <a href="#about">소개</a>
     <a href="#services">서비스</a>
+    <a href="#product-categories">상품</a>
     <a href="#projects">포트폴리오</a>
     <a href="#process">프로세스</a>
     <a href="#contact">문의</a>
@@ -99,6 +105,7 @@
         <div class="about-layout">
           <h2 class="about-title reveal">기획의 언어를<br>디자인의 결과로<br>바꿉니다.</h2>
           <div class="about-right">
+            <p class="about-intro reveal">레드빈디자인은 '레드빈'이라는 브랜드명으로 운영되는 수원 기반 디자인 스튜디오입니다.</p>
             <p class="about-desc reveal">브랜드 디자인, 홈페이지 제작, 상세페이지, 광고 소재까지 하나의 흐름으로,<br>고객에게 제품과 서비스가 더 선명하게 보이도록, 구조, 문장, 시각 완성도를 제공합니다.</p>
             <div class="stats reveal">
               <div class="stat">
@@ -159,7 +166,26 @@
             <p>운영 중 필요한 이미지, 배너, 페이지 개선을 빠르게 지원합니다.</p>
           </article>
         </div>
-        <div style="margin-top:40px;text-align:center;">
+        <!-- ══ 상품 카테고리 바로가기 ══ -->
+        <div class="product-categories-wrap" id="product-categories">
+          <p class="product-categories-desc">필요한 디자인 서비스를 카테고리별로 빠르게 확인해보세요.</p>
+          <div class="product-categories-grid">
+            <a class="product-cat-btn" href="products.html?category=website">홈페이지</a>
+            <a class="product-cat-btn" href="products.html?category=sns">SNS</a>
+            <a class="product-cat-btn" href="products.html?category=video">영상 편집</a>
+            <a class="product-cat-btn" href="products.html?category=branding">브랜딩</a>
+            <a class="product-cat-btn" href="products.html?category=book">책자/카탈로그</a>
+            <a class="product-cat-btn" href="products.html?category=ppt">PPT</a>
+            <a class="product-cat-btn" href="products.html?category=outdoor">옥외 홍보물</a>
+            <a class="product-cat-btn" href="products.html?category=business-card">명함</a>
+            <a class="product-cat-btn" href="products.html?category=sticker">스티커</a>
+            <a class="product-cat-btn" href="products.html?category=invitation">초대장</a>
+            <a class="product-cat-btn" href="products.html?category=envelope">봉투</a>
+            <a class="product-cat-btn" href="products.html?category=election">선거홍보물</a>
+          </div>
+        </div>
+
+        <div style="margin-top:32px;text-align:center;">
           <a href="products.html" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:1px solid rgba(196,18,48,0.4);color:#ffd7dc;font-size:14px;font-weight:700;letter-spacing:0.02em;transition:background 0.2s;" onmouseover="this.style.background='rgba(196,18,48,0.15)'" onmouseout="this.style.background='transparent'">판매 서비스 전체 안내 보기 →</a>
         </div>
       </div>
@@ -424,7 +450,7 @@
               <li><span>이메일</span><a href="mailto:whrudghks154@naver.com">whrudghks154@naver.com</a></li>
               <li><span>운영시간</span><span>24시간</span></li>
               <li><span>주소</span><span>경기도 수원시 장안구 정조로1102번길 16-6, 402호</span></li>
-              <li><span>카카오톡</span><a href="https://open.kakao.com/o/s9PPCaKg" target="_blank" rel="noopener">오픈채팅 바로가기</a></li>
+              <li><span>카카오톡</span><a href="https://pf.kakao.com/_IDxinX/chat" target="_blank" rel="noopener noreferrer">카카오톡 상담하기</a></li>
               <li><span>블로그</span><a href="https://blog.naver.com/whrudghks154" target="_blank" rel="noopener">네이버 블로그</a></li>
             </ul>
           </div>
@@ -498,5 +524,39 @@
 
   <script src="portfolio-data.js"></script>
   <script src="script.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "레드빈디자인",
+    "alternateName": ["RedBean Design", "레드빈"],
+    "url": "https://redbeandesign.co.kr/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "레드빈디자인",
+    "alternateName": ["RedBean Design", "레드빈"],
+    "url": "https://redbeandesign.co.kr/",
+    "logo": "https://redbeandesign.co.kr/홈페이지 제작 이미지/메인 이미지.png",
+    "description": "레드빈디자인은 수원을 기반으로 홈페이지 제작, 상세페이지 디자인, 브랜드 아이덴티티, 광고·마케팅 디자인을 제공하는 디자인 스튜디오입니다.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "정조로1102번길 16-6, 402호",
+      "addressLocality": "수원시 장안구",
+      "addressRegion": "경기도",
+      "addressCountry": "KR"
+    },
+    "telephone": "010-8945-7660",
+    "email": "whrudghks154@naver.com",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "areaServed": "KR",
+    "serviceType": ["브랜드 디자인", "홈페이지 제작", "상세페이지 디자인", "광고·마케팅 디자인", "편집 및 인쇄 디자인"]
+  }
+  </script>
 </body>
 </html>

@@ -1,5 +1,8 @@
 'use strict';
 
+/* ══ 카카오톡 상담 링크 (변경 시 이 값만 수정) ══ */
+const KAKAO_CHAT_URL = 'https://pf.kakao.com/_IDxinX/chat';
+
 /* ══ Header scroll effect ══ */
 const header = document.querySelector('[data-header]');
 window.addEventListener('scroll', () => {
@@ -131,6 +134,23 @@ function initPortfolio() {
   setActive(0);
 }
 initPortfolio();
+
+/* ══ 카카오톡 플로팅 상담 버튼 ══ */
+(function () {
+  const btn = document.createElement('a');
+  btn.href = KAKAO_CHAT_URL;
+  btn.target = '_blank';
+  btn.rel = 'noopener noreferrer';
+  btn.className = 'kakao-float';
+  btn.setAttribute('aria-label', '카카오톡 상담하기');
+  btn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 3C6.477 3 2 6.477 2 10.5c0 2.528 1.548 4.756 3.9 6.1L4.9 20l4.1-2.1A11.5 11.5 0 0012 18c5.523 0 10-3.477 10-7.5S17.523 3 12 3z"/>
+    </svg>
+    <span>카카오톡 상담</span>
+  `;
+  document.body.appendChild(btn);
+})();
 
 /* ══ Contact form ══ */
 const form = document.querySelector('[data-contact-form]');
