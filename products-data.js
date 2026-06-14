@@ -560,9 +560,8 @@ const RB_PRODUCTS = {
       name: '선거공보',
       shortDesc: '선거관리위원회 규격 선거공보 편집 디자인',
       optionType: 'pages',
-      // 공급가 기본 100,000원 × 1.1 = 110,000원 / 공급가 30,000원/P × 1.1 = 33,000원/P
-      basePrice: 110000,
-      pricePerPage: 33000,
+      // 계산: 선택 페이지 수 × 44,000원 (공급가 40,000원/P × 1.1 = 44,000원/P VAT 포함)
+      pricePerPage: 44000,
       minPages: 4,
       maxPages: 40,
       pageStep: 4,
